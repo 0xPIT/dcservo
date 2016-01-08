@@ -10,7 +10,7 @@ import processing.serial.*;
 
 Serial myPort;      // The serial port
 
-float kp=3, ki=1, kd=0.01;
+float kp=30, ki=2, kd=0.06;
 void setup() {
   size(600, 400);
   // create a font with the third font available to the system:
@@ -19,7 +19,7 @@ void setup() {
   frameRate(1);
   // List all the available serial ports:
   println(Serial.list());
-  String portName = Serial.list()[0];
+  String portName = Serial.list()[1];
   myPort = new Serial(this, portName, 115200);
 }
 
